@@ -1,0 +1,136 @@
+
+ .card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: calc(33.33% - 20px); /* Adjust width for 3 cards in a row on larger screens */
+  margin: 10px;
+  padding: 0;
+  border: none;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+} 
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%; 
+    margin: 10px 0;
+  }
+}
+
+  
+  .card:hover {
+    transform: translateY(-5px);
+
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+    opacity: 0;
+    background-size: cover; 
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+    
+  }
+  
+  .card:nth-child(1)::before {
+    background-image: url('../img/ctgclg.jpeg');
+    
+   
+     
+  }
+  
+  .card:nth-child(2)::before {
+    background-image: url('../img/mohsin.jfif');
+   
+  }
+  
+  .card:nth-child(3)::before {
+    background-image: url('../img/583767058390187.jfif'); 
+  }
+  
+  .card:nth-child(4)::before {
+    background-image: url('../img/bg.jfif');
+
+  }
+  
+  .card:nth-child(5)::before {
+    background-image: url('../img/gm.jfif');
+  }
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    color: rgb(0, 0, 0);
+    font-family: 'Borel', cursive;
+    font-size: 500px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease-in-out;
+  }
+
+  .card:hover .card-content {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.521);
+  
+  }
+  .title {
+    font-size: 32px;
+  }
+  .card:hover .chance  {
+    color: rgb(15, 199, 206);
+  }
+
+  .mt-3 {
+    position: relative;
+    text-align: center;
+  } 
+  .chance {
+    font-size: 18px;
+    font-size: 35px;
+    margin-bottom: 0;
+    padding: 0;
+    color: rgb(59, 119, 32);
+  }
+  #h2c {
+    color: #9d2ad5e3;
+    text-align: center;
+  }
+ 
+  .percentage {
+    font-size: 35px;
+    display: flex;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    color: #ff4d4d;
+    transition: color 0.3s ease-in-out;
+    text-align: center;
+  }
+
+  .card:hover .percentage {
+    color: #b8f807;
+  }
+  
+.card:hover::before {
+  opacity: 1;
+}
+
+

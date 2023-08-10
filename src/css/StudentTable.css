@@ -1,0 +1,15 @@
+.mb-3 {
+    position:relative;
+    top: 0;
+    right: 0;
+
+}
+.mr-2 {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+h1.display-4 {
+    text-align: center;
+}
